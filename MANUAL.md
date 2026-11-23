@@ -5,6 +5,10 @@ macOS (Cocoa / Metal) · Windows x86_64 & ARM64 (Win32 / Direct3D 11) · Linux x
 
 ---
 
+<div align="center">
+  <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
+</div>
+
 ## Contents
 
 ### Part I — User Guide
