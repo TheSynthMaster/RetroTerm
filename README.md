@@ -1,5 +1,9 @@
 # RetroTerm (v2.0)
 
+<div align="center">
+  <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
+</div>
+
 ## Latest Changes (v2.0)
 
 - **Linux Desktop Edition**: Native SDL2/OpenGL build for Linux `x86_64` and `ARM64` with the same display engines, menus, profiles, scripts, SFTP browser, and PTY support as macOS and Windows, shipped with a simple desktop installer.
