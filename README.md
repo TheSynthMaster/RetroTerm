@@ -1,8 +1,12 @@
-# RetroTerm (v2.0)
+# RetroTerm (v2.0.1)
 
 <div align="center">
   <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
 </div>
+
+## Latest Changes (v2.0.1)
+
+- **PLATO System Beep Fix**: Wired `plato_terminal_t::beep_callback` to the native OS system alert (`NSBeep()` on macOS, `MessageBeep(MB_OK)` on Windows, matching Linux `rt_linux_audio_beep`) so PLATO `ECHO 0x7B` and MicroTutor beep commands produce audio across all platforms.
 
 ## Latest Changes (v2.0)
 
