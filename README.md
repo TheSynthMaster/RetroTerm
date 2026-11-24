@@ -1,8 +1,12 @@
-# RetroTerm (v2.0.1)
+# RetroTerm (v2.1.0)
 
 <div align="center">
   <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
 </div>
+
+## Latest Changes (v2.1.0)
+
+- **Script Shortcuts**: Full quick-execution hotkey support for both standard and PLATO scripts on macOS (including `Ctrl`, `Alt`, `Shift`, `Cmd`, and `F1`–`F12`), plus PLATO key conflict warnings across macOS, Windows, and Linux.
 
 ## Latest Changes (v2.0.1)
 
