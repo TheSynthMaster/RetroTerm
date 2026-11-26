@@ -52,8 +52,8 @@ This distribution incorporates the following third-party libraries:
  *   following disclaimer.
  *
  *   Redistributions in binary form must reproduce the above
- *   copyright notice, this list of conditions and the following
- *   disclaimer in the documentation and/or other materials
+ *   copyright notice, this list of conditions and the
+ *   following disclaimer in the documentation and/or other materials
  *   provided with the distribution.
  *
  *   Neither the name of the copyright holder nor the names
@@ -63,7 +63,7 @@ This distribution incorporates the following third-party libraries:
  *
  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
  * CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
- * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * INCLUDING, BUT NOT LIMITED TO THE IMPLIED WARRANTIES
  * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
  * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
  * CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
@@ -109,3 +109,83 @@ THE SOFTWARE.
 --------------------------------------------------------------------------------
 WinFsp - Windows File System Proxy, Copyright (C) Bill Zissimopoulos
 Repository: https://github.com/winfsp/winfsp
+
+================================================================================
+RESEARCH ACKNOWLEDGMENTS & ADDITIONAL NOTICES
+================================================================================
+
+--------------------------------------------------------------------------------
+1. Electrohome 1983 (WarGames Terminal Display Engine)
+--------------------------------------------------------------------------------
+RetroTerm's WarGames display engine (80x24, 8x10 character matrix, P4 phosphor
+CRT optical pipeline) uses an original clean-room C11 character generator and
+renderer. No third-party font files, XPM bitmaps, PDFs, or film frames are
+copied or redistributed.
+
+Technical & Historical References Consulted:
+- Jeffrey Swartz (CompuPro), "Making 'Wargames' computers compute required
+  innovative programming", Mini-Micro Systems, June 1984 (pp. 135-145),
+  https://bitsavers.org/magazines/Mini-Micro_Systems/198406_Making_Wargames.pdf
+  (Primary hardware reference for the CompuPro System 816 / S-100 80x24 video
+  system, replaceable character ROM, 48 Hz vertical sync to 24 fps cameras,
+  and 17" Electrohome P4 monochrome CRT monitor.)
+- Todd Fischer / Fischer-Freitas Co., "The WarGames IMSAI",
+  https://www.imsai.net/the-wargames-imsai/
+  (Historical production documentation on the IMSAI 8080 / IKB-1 prop setup
+  and Electrohome 17" B&W composite monitor.)
+- Michael Walden, "WarGames Terminal Fonts", https://mw.rat.bz/wgterm/
+  (Consulted for technical analysis of the 8x10 logical character matrix,
+  the 81 observed vs. 14 reconstructed printable ASCII glyph breakdown, and
+  ASCII-1963 '^' (0x5E). His font files and XPM bitmaps under CC BY-NC-SA 4.0
+  were NOT copied or redistributed.)
+- Lord Nightmare, "WOPR Terminal",
+  https://www.fontstruct.com/fontstructions/show/1616604/wopr-terminal
+  (Consulted for technical analysis of the hardware character-ROM constraints:
+  max 8 active vertical scanlines per glyph inside the 10-scanline cell,
+  9th-pixel shift-register artifact, and full 10-scanline hardware block
+  cursor. His FontStruct fonts under CC BY-SA 3.0 were NOT copied or
+  redistributed.)
+
+--------------------------------------------------------------------------------
+2. Digital Rain Screensaver (The Matrix, 1999)
+--------------------------------------------------------------------------------
+RetroTerm's Matrix Digital Rain screensaver is based on primary frame-by-frame
+research of the 1999 opening title sequence:
+- Carl Newton, "The Matrix Digital Rain -- Frame-by-Frame Analysis",
+  https://carlnewton.github.io/digital-rain-analysis/
+  Repository: https://github.com/carlnewton/digital-rain (MIT License)
+  (Primary source for the 53-glyph 1999 repertoire, viewBox 94x140 normalized
+  into 16x24 coverage bitmaps in RetroTerm, and the six observed 1999
+  animation rules: stationary grid, invisible prefixes, synchronized
+  3-static + 1-cross-dissolve mutations, independent deletion strings,
+  ~1-in-5 highlighted heads, and simultaneous cursor stammer.)
+- Christopher L. Doyle (matrix.watch), "How the 1999 Matrix Digital Rain
+  Actually Works", https://matrix.watch/articles/how-matrix-digital-rain-works
+  (Consulted for comparative verification of 1999 vs. sequel behavior, glyph
+  orientation cross-checks, and invisible-prefix / stammer context.)
+- Historical Visual Design Credit: Original The Matrix (1999) digital rain
+  visual design by Simon Whiteley and Animal Logic.
+
+carlnewton/digital-rain -- MIT License:
+
+MIT License
+
+Copyright (c) 2019 Carl Newton
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
