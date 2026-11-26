@@ -1,8 +1,16 @@
-# RetroTerm (v2.3.0)
+# RetroTerm (v3.0.0)
 
 <div align="center">
   <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
 </div>
+
+## Latest Changes (v3.0.0)
+
+- **New WarGames Display Engine (1983 IMSAI 8080 / WOPR)**: Standalone 80×24 optical CRT simulation across macOS, Windows, and Linux featuring a custom character generator, cyan-blue phosphor glow and bloom, subtle scanlines, vignetted blue CRT glass background, phosphor persistence, blinking block cursor, and full profile & menu integration (`View → WarGames`).
+- **Interactive WarGames Boot Sequence & Preferred Local Shell**: Launches directly in WarGames mode with the progressive WOPR/David Lightman typewriter intro (`wargames_intro.json`, toggleable via `View → Disable WarGames Intro`) displaying the live `VERSION`-sourced banner, then seamlessly hands off to the OS default local shell (`zsh` on macOS, `PowerShell` on Windows, `bash` on Linux) while preserving the banner on screen.
+- **WarGames Monochrome Matrix Screensaver**: Bright WarGames-tinted digital rain rendered over the matching blue vignetted CRT background.
+- **New Preset Profile (`StarWars meet Wargames`)**: Built-in Star Wars ASCII telnet profile preconfigured for the WarGames display engine.
+- **Windows ConPTY Banner Cursor Sync**: Aligns PowerShell's initial cursor position with the preserved startup banner so typing never jumps the cursor back to row 1.
 
 ## Latest Changes (v2.3.0)
 
@@ -43,7 +51,7 @@
 
 **RetroTerm** is a native cross-platform terminal emulator for macOS, Windows, and Linux, combining a modern VT100/VT220/xterm parser (`libvterm`), SSH2 (`libssh2`), Telnet, Local PTY, native PLATO sessions, and SFTP file management with the physical vintage optical display simulations of **PlatoLives**.
 
-Instead of rendering only flat pixels in a generic window, RetroTerm lets you work inside authentic optical hardware models—an **orange gas-plasma panel**, a **shadow-mask color CRT**, a **Tektronix 4014 Direct View Bistable Storage Tube (DVBST)**, a **DEC PDP-1 Type 30 precision CRT**, or a **Commodore 64 (VIC-II)**—while preserving the speed, ergonomics, and capabilities of a modern workstation terminal, including a dedicated **Modern Dynamic Grid** mode for crisp high-DPI Unicode coding sessions.
+Instead of rendering only flat pixels in a generic window, RetroTerm lets you work inside authentic optical hardware models—an **orange gas-plasma panel**, a **shadow-mask color CRT**, a **Tektronix 4014 Direct View Bistable Storage Tube (DVBST)**, a **DEC PDP-1 Type 30 precision CRT**, a **Commodore 64 (VIC-II)**, or the **WarGames (1983 WOPR/IMSAI CRT)**—while preserving the speed, ergonomics, and capabilities of a modern workstation terminal, including a dedicated **Modern Dynamic Grid** mode for crisp high-DPI Unicode coding sessions.
 
 ---
 
@@ -103,7 +111,7 @@ Inspired by PlatoLives' resilient connection architecture, network failures and 
 
 # Display Engines
 
-RetroTerm provides **8 selectable display modes** tailored for both vintage hardware fidelity and modern day-to-day terminal work:
+RetroTerm provides **9 selectable display modes** tailored for both vintage hardware fidelity and modern day-to-day terminal work:
 
 1. **Real Plasma**: Gas-plasma panel simulation with configurable persistence decay (100 ms – 5000 ms), spatial distortion, and selectable phosphor overrides (Orange, P31 Green, P40 Amber, P4 White).
 2. **Crisp Monochrome**: High-contrast sharp monochrome matrix emulation with instant response and zero geometric distortion.
@@ -113,6 +121,7 @@ RetroTerm provides **8 selectable display modes** tailored for both vintage hard
 6. **DEC PDP-1 Type 30 (1964)**: Precision point-plotting CRT with P7 cascade phosphor simulation (cyan prompt flash shifting into golden-amber persistence), 1961 MIT Codeword / 1964 Type 33 fonts, and configurable refresh rate (5–60 Hz).
 7. **Commodore 64 (VIC-II)**: Authentic 8-bit display with RF composite, Commodore 1702 CRT, and Crisp Hires presets, selectable 12.5% border modes (including Turbo Loader Border FX), and Classic Blue / Multi-Color / Amber / Green palettes.
 8. **Modern Dynamic Vector Grid**: Resizable variable-column/row grid paired with Apple Metal (macOS), Direct3D 11 (Windows), or OpenGL (Linux) GPU text rendering, configurable monospace font family/size, cursor styles (Block, Underline, Bar), and full TrueColor / UTF-8 support. Not available in PLATO sessions.
+9. **WarGames (1983 IMSAI 8080 / WOPR)**: Standalone 80×24 optical CRT simulation with custom character generator, cyan-blue phosphor glow and bloom, subtle scanlines, vignetted blue CRT glass background, phosphor persistence, blinking block cursor, and interactive WOPR/David Lightman startup sequence.
 
 ---
 
@@ -139,7 +148,7 @@ Consistent menu structure across macOS, Windows, and Linux:
 - **Microtutor** (PLATO sessions only): Load and Boot from MTE, Z80 Diagnostic Log
 - **Scripts**: Run saved scripts, Manage Scripts, Scripting Reference (PLATO scripts in PLATO sessions)
 - **Keyboard**: Select Keyboard Layout, Manage Keyboard Profiles, Keyboard Reference (PLATO keyboard profiles, double-tap, and arrow modes in PLATO sessions)
-- **View**: All 8 Display Engines, per-engine hardware options (Plasma/CRT/Tektronix/PDP-1/C64/Modern Font & Cursor), Window Size presets (1×–4× / Aspect Fit), Full Screen (`F11`), Performance HUD (`F12`), Matrix Screensaver, Override Phosphor Color, Hide Menu Bar (Linux)
+- **View**: All 9 Display Engines (including **WarGames**), per-engine hardware options (Plasma/CRT/Tektronix/PDP-1/C64/Modern Font & Cursor), Window Size presets (1×–4× / Aspect Fit), Full Screen (`F11`), Performance HUD (`F12`), Matrix Screensaver, Disable WarGames Intro, Override Phosphor Color, Hide Menu Bar (Linux)
 - **Edit**: Copy Selection, Copy Screen Text, Paste, Live Text Buffer, Cancel Paste, Send Control Signals / Function Keys / Editing Keys
 - **Tools**: Diagnostic Log, Renderer Performance Log
 - **Help**: Keyboard Reference, Scripting Reference, About RetroTerm
@@ -203,9 +212,9 @@ ctest --test-dir build-mac --output-on-failure
 | :--- | :--- |
 | **Core Architecture** | Portable C11 core shared identically across macOS, Windows, and Linux UIs |
 | **VT Engine** | `libvterm` (VT100 / VT220 / xterm-256color / TrueColor / OSC / Mouse / AltScreen) |
-| **Optical Pipeline** | `PlatoLives` C11 renderers (`Real Plasma`, `CRT`, `Tektronix 4014`, `PDP-1 Type 30`, `C64 VIC-II`) |
+| **Optical Pipeline** | `PlatoLives` C11 renderers (`Real Plasma`, `CRT`, `Tektronix 4014`, `PDP-1 Type 30`, `C64 VIC-II`) + standalone `WarGames` CRT engine (`rt_wargames`) |
 | **Modern Renderer** | GPU-accelerated texture atlas (`rt_modern` + CoreText / DirectWrite glyph rasterization) |
 | **SSH & SFTP** | Asynchronous non-blocking `libssh2` + virtual filesystem layer (`rt_sftp_vfs`) |
 | **macOS Drive Bridge** | Multi-threaded loopback RFC 4918 WebDAV server (`rt_webdav_sftp`) + `/sbin/mount_webdav` |
 | **Connection Diagnostics** | Shared state classifier (`rt_conn_diag`) + modeless Cocoa / Win32 auto-retry dialogs |
-| **Test Suite** | 15 automated CTest suites (`smoke`, `vt`, `adapter`, `all_engines`, `ssh`, `sftp_vfs`, `script`, `keymap`, `telnet`, `pty`, `settings`, `modern`, `conn_diag`, `plato_core`, `screensaver`) |
+| **Test Suite** | 17 automated CTest suites (`smoke`, `vt`, `adapter`, `all_engines`, `ssh`, `sftp_vfs`, `script`, `keymap`, `telnet`, `pty`, `settings`, `modern`, `conn_diag`, `wargames`, `wargames_integration`, `plato_core`, `screensaver`) |
