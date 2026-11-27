@@ -1,4 +1,4 @@
-# RetroTerm (v3.1.0)
+# RetroTerm (v3.2.0)
 
 <div align="center">
   <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
