@@ -1,8 +1,14 @@
-# RetroTerm (v3.0.0)
+# RetroTerm (v3.1.0)
 
 <div align="center">
   <img src="assets/Presentation_image.png" alt="RetroTerm Presentation" width="800">
 </div>
+
+## Latest Changes (v3.1.0)
+
+- **PLATO + WarGames Display Mode**: Native 512×512 PLATO bitmap rendering on the WarGames (1983 Electrohome) CRT engine across macOS, Windows, and Linux — borderless square 2048×2048 (`4×4` discrete phosphor dots, dual-scale Electrohome CRT halation, scanline modulation) and peak-preserving 1024×1024 downsample on smaller/1× windows, with linear PLATO touch-panel mapping and full menu/profile integration (`View → WarGames`, Manage Profiles, Quick Connect).
+- **Unchanged VT WarGames Engine**: Standard 80×24 text-mode WarGames rendering for SSH, Telnet, and Local PTY remains completely untouched.
+- **Cross-Platform PLATO/WarGames Fixes**: Eager/lazy WarGames engine initialization on Windows (including `New Window with Profile`), direct 1:1 D3D11 pixel shader for PLATO+WarGames scanline clarity, direct Win32 `View` submenu radio/enable updates, macOS `validateMenuItem:` enablement in PLATO mode, and PLATO mouse/clipboard guards across macOS, Windows, and Linux.
 
 ## Latest Changes (v3.0.0)
 
@@ -121,7 +127,7 @@ RetroTerm provides **9 selectable display modes** tailored for both vintage hard
 6. **DEC PDP-1 Type 30 (1964)**: Precision point-plotting CRT with P7 cascade phosphor simulation (cyan prompt flash shifting into golden-amber persistence), 1961 MIT Codeword / 1964 Type 33 fonts, and configurable refresh rate (5–60 Hz).
 7. **Commodore 64 (VIC-II)**: Authentic 8-bit display with RF composite, Commodore 1702 CRT, and Crisp Hires presets, selectable 12.5% border modes (including Turbo Loader Border FX), and Classic Blue / Multi-Color / Amber / Green palettes.
 8. **Modern Dynamic Vector Grid**: Resizable variable-column/row grid paired with Apple Metal (macOS), Direct3D 11 (Windows), or OpenGL (Linux) GPU text rendering, configurable monospace font family/size, cursor styles (Block, Underline, Bar), and full TrueColor / UTF-8 support. Not available in PLATO sessions.
-9. **WarGames (1983 IMSAI 8080 / WOPR)**: Standalone 80×24 optical CRT simulation with custom character generator, cyan-blue phosphor glow and bloom, subtle scanlines, vignetted blue CRT glass background, phosphor persistence, blinking block cursor, and interactive WOPR/David Lightman startup sequence.
+9. **WarGames (1983 IMSAI 8080 / WOPR)**: Standalone 80×24 optical CRT simulation for SSH, Telnet, and Local PTY (custom character generator, cyan-blue phosphor glow and bloom, subtle scanlines, vignetted blue CRT glass background, phosphor persistence, blinking block cursor, and interactive WOPR/David Lightman startup sequence), plus borderless square 512×512 native PLATO bitmap rendering (`2048×2048` / `1024×1024`).
 
 ---
 

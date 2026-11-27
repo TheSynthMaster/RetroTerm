@@ -1,4 +1,4 @@
-# RetroTerm v3.0.0 — User and Technical Manual
+# RetroTerm v3.1.0 — User and Technical Manual
 
 **Native multi-platform terminal emulator for SSH2, Telnet, Local PTY, PLATO, and SFTP**  
 macOS (Cocoa / Metal) · Windows x86_64 & ARM64 (Win32 / Direct3D 11) · Linux x86_64 & ARM64 (SDL2 / OpenGL)
@@ -105,7 +105,7 @@ Fresh installations also include four preset profiles:
 
 ## 4. Display Engines, Controls, and Matrix Screensaver
 
-### 4.1 The 8 Display Engines
+### 4.1 The 9 Display Engines
 
 Select any mode on the fly from the **View** menu (changes in **View** apply to the active window immediately without overwriting your saved profiles):
 
@@ -119,6 +119,7 @@ Select any mode on the fly from the **View** menu (changes in **View** apply to 
 | **DEC PDP-1 Type 30** | Point-plotting CRT with P7 cascade phosphor (blue-white flash into yellow-green persistence) | Selectable 1961/1964 fonts, refresh rate (`5–60 Hz`), and Historic/Fast/Modern presets |
 | **Commodore 64 (VIC-II)** | Classic 8-bit monitor presentation | Presets (`RF / Composite`, `1702 CRT`, `Crisp Hires`), `12.5%` border (`Off`, `Static`, `Turbo Loader FX`), and color schemes (`Classic Blue`, `Multi-Color`, `Amber`, `Green`) |
 | **Modern (High-Fidelity)** | Resizable variable-column/row GPU text grid (`Cmd+Shift+M` / `Ctrl+Shift+M`) | Full UTF-8, TrueColor, `Ctrl+=` / `Ctrl+-` / `Ctrl+0` font sizing, Block/Underline/Bar cursor + blink. *Disabled in PLATO mode.* |
+| **WarGames (1983 Electrohome)** | Cyan-blue 1983 Electrohome CRT with phosphor glow, bloom, scanlines, and vignetted navy glass | 80×24 text mode for SSH/Telnet/PTY (with WOPR intro); borderless square 512×512 bitmap mode (`2048×2048` / `1024×1024`) in PLATO sessions |
 
 ### 4.2 Color Overrides, Sizing, and HUD
 
