@@ -1,4 +1,4 @@
-# RetroTerm v3.2.0 — User and Technical Manual
+# RetroTerm v3.3.0 — User and Technical Manual
 
 **Native multi-platform terminal emulator for SSH2, Telnet, Local PTY, PLATO, and SFTP**  
 macOS (Cocoa / Metal) · Windows x86_64 & ARM64 (Win32 / Direct3D 11) · Linux x86_64 & ARM64 (SDL2 / OpenGL)
